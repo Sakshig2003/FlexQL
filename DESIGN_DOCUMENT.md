@@ -413,12 +413,13 @@ This deletes all `.tbl` files before opening the database, giving a guaranteed c
 
 ### 11.3 Memory Budget (10M rows, BIG_USERS table)
 
-| Component | Size |
-|-----------|------|
-| Index (10M entries × 16 bytes) | ~160 MB |
-| LRU page cache | ~256 MB |
-| Row data on disk | ~5.2 GB (52 bytes/row × 10M) |
-| Per-thread stack | ~8 MB per connection |
+| Metric | Result |
+|--------|--------|
+| Rows Inserted | 10,000,000 |
+| Total Insertion Time | 8,155 ms |
+| Throughput | 1,226,241 rows/sec |
+| Unit Tests Passed | 21 / 21 |
+| Data File Size | 1.5 GB (BIG_USERS.tbl) |
 
 ---
 
